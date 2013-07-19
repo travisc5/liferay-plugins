@@ -1,35 +1,41 @@
-#set($imageWidth = $maxImageWidth.Data)
-#set($imageHeight = $maxImageHeight.Data)
-#set($imageWidthPx = $imageWidth + "px")
-#set($imageHeightPx = $imageHeight + "px")
-#set($interval = $timeInterval.Data)
 #set($activeIndexValue = $activeIndex.Data)
+#set($imageHeight = $maxImageHeight.Data)
+#set($imageHeightPx = $imageHeight + "px")
+#set($imageWidth = $maxImageWidth.Data)
+#set($imageWidthPx = $imageWidth + "px")
+#set($interval = $timeInterval.Data)
+#set($totalCount = 0)
 
 <style type="text/css">
-        .aui-carousel {
-    	-moz-user-select: none;
+	.aui-carousel {
+		-moz-user-select: none;
 		margin: 20px 0;
 	}
+
 	.aui-carousel-item {
 		border-radius: 10px 10px 10px 10px;
 		text-indent: -9999em;
 	}
+
 	.aui-carousel li {
 		margin: 0 !important;
 	}
 </style>
 
-#set($totalCount = 0)
+
+
 <div id="carousal">
 	#foreach($imageElement in $ImageElementSet.getSiblings())
 		#if($imageElement.image.getData() != "")
 			#if($imageElement.linkUrl.getData() != "")
 				<a href="$imageElement.linkUrl.Data">
-					<img class="aui-carousel-item" src="$imageElement.image.Data" height="$imageHeightPx" width="$imageWidthPx" />
-				</a>
-			#else
-				<img class="aui-carousel-item" src="$imageElement.image.Data" height="$imageHeightPx" width="$imageWidthPx" />
 			#end
+					<img class="aui-carousel-item" height="$imageHeightPx" src="$imageElement.image.Data" width="$imageWidthPx" />
+
+			#if($imageElement.linkUrl.getData() != "")
+				</a>
+			#end
+
 			#set($totalCount = $totalCount + 1)
 		#end
 	#end
@@ -37,16 +43,20 @@
 
 #if($totalCount > 0)
 	<script>
-		AUI().ready('aui-carousel', function(A) 
-		{ 
-			var carousel = new A.Carousel(
-			{ 
-				contentBox: '#carousal', 
-				activeIndex: $activeIndexValue,
-				intervalTime: $interval, 
-				width: $imageWidth, 
-				height: $imageHeight 
-			}).render(); 
-		});
+		AUI().ready(
+			'aui-carousel',
+			function(A)
+			{
+				var carousel = new A.Carousel(
+					{
+						activeIndex: $activeIndexValue,
+						contentBox: '#carousal',
+						height: $imageHeight,
+						intervalTime: $interval,
+						width: $imageWidth
+					}
+				).render();
+			}
+		);
 	</script>
 #end

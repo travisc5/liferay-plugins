@@ -5,19 +5,7 @@
 
 $pcolor: #FCFCFC;
 $brcolor: #E2E2E2;
-$spcolor: transparent; 
-
-/* -------- Set Compass Defaults -------- */
-
-$default-background-attachment: scroll;
-$default-background-clip: border-box;
-$default-background-origin: padding-box;
-$default-background-size: auto auto;
-$default-box-shadow: #000  0 0 6px #000 inset;
-$default-transition-timing-function: ease;
-@mixin background-attachment {
-	background-attachment: scroll;
-}
+$spcolor: transparent;
 
 /* -------- Global -------- */
 
@@ -26,21 +14,21 @@ a {
 }
 
 body {
-	background: #33383A url(../images/crosslines-pattern.png) repeat 0 0; 
-	font-size: 15px "Helvetica Neue", Helvetica, Verdana, sans-serif;
+	background: #33383A url(../images/crosslines-pattern.png) repeat 0 0;
+	font: 15px "Helvetica Neue", Helvetica, Verdana, sans-serif;
 	padding: 1em 5em;
 }
 
 body, input, textarea {
 	color: #726F6F;
-	font: 15px "Helvetica Neue",Helvetica, Arial, sans-serif;
+	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
 }
 
 div section {
 	background-color: #FFF;
-	border: 1px $brcolor solid;
+	border: 1px solid $brcolor;
 	clear: both;
 	display: block;
 	float: left;
@@ -50,16 +38,16 @@ div section {
 }
 
 h2 {
-	border-bottom: 1px #CCC solid;
+	border-bottom: 1px solid #CCC;
 	color: #269CCB;
-	font: bold 1.1em "Helvetica Neue",Helvetica, Arial, sans-serif;
-} 
+	font: bold 1.1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 /* -------- Wrapper / Skip / Sign-in -------- */
 
 #wrapper {
 	border-width: 0 3px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0 auto 2em;
 	max-width: 1000px;
 
@@ -72,8 +60,6 @@ h2 {
 
 #header {
 	background-color: #FFF;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	position: relative;
 
 	#site-logo {
@@ -81,8 +67,8 @@ h2 {
 		padding: 2em 0;
 
 		img {
-		height: auto;
-		float: left;
+			height: auto;
+			float: left;
 		}
 	}
 }
@@ -95,7 +81,7 @@ h2 {
 	ul {
 		clear: none;
 		float: none;
-		list-style: none outside none;
+		list-style: none;
 		margin: 0;
 		padding: 0;
 
@@ -112,9 +98,9 @@ h2 {
 			a:hover {
 				background-position: 0 -40px;
 			}
-		} 
+		}
 	}
-	
+
 	.facebook {
 		a {
 			background: $spcolor url(../images/social-media-icons/facebook.png) no-repeat 0 0;
@@ -124,11 +110,11 @@ h2 {
 			}
 		}
 	}
-	
-	.twitter { 
+
+	.twitter {
 		a {
 			background: $spcolor url(../images/social-media-icons/twitter.png) no-repeat 0 0;
-		
+
 
 			&:hover {
 				background-color: #48C4D2;
@@ -138,15 +124,15 @@ h2 {
 	}
 
 	.google-plus {
-		a { 
+		a {
 			background: $spcolor url(../images/social-media-icons/google.png) no-repeat 0 0;
 
 			&:hover {
 				background-color: #F45750;
 			}
-		}	
+		}
 	}
-	
+
 	.rss {
 		a {
 			background: $spcolor url(../images/social-media-icons/rss.png) no-repeat 0 0;
@@ -161,16 +147,15 @@ h2 {
 /* -------- Navigation -------- */
 
 #navigation {
-	background: $spcolor url(../images/navigation/menu_bg.png) repeat-x 0 0; 
+	background: $spcolor url(../images/navigation/menu_bg.png) repeat-x 0 0;
 	clear: both;
 	margin: 0 2px;
 	min-height: 2.2em;
 	padding: 0 5px;
 	position: relative;
-	
 
 	a {
-		border-right: 1px #006797 solid;
+		border-right: 1px solid #006797;
 		display: block;
 		font-size: 1.1em;
 		margin: 0 1px;
@@ -182,8 +167,8 @@ h2 {
 		display: none;
 
 		li a {
-			background: #F9F9F9 none repeat 0 0;
-			border-bottom: 1px #CCC dotted;
+			background: #F9F9F9;
+			border-bottom: 1px dotted #CCC;
 			color: #444;
 			display: block;
 			font-size: 13px;
@@ -191,7 +176,7 @@ h2 {
 			width: 168px;
 
 			&:hover {
-				background: #169FE6 none repeat 0 0;
+				background: #169FE6;
 				color: #FFF;
 			}
 		}
@@ -203,29 +188,29 @@ h2 {
 		display: inline-block;
 
 		&:hover .child-menu {
-			background: #F9F9F9 none repeat 0 0;
-			border: 1px #726F6F solid;
+			background: #F9F9F9;
+			border: 1px solid #726F6F;
 			clear: both;
 			display: inline-block;
 			position: absolute;
-			width: 196px;   
+			width: 196px;
 		}
 	}
 
 
 	h1 {
-	visibility: hidden;
-	}   
+		visibility: hidden;
+	}
 
 	.selected a {
-		background: #169FE6 none repeat 0 0; 
+		background: #169FE6;
 		color: #FFF;
 		display: block;
 		text-decoration: none;
 	}
 
 	ul {
-		border: 1px #726F6F solid;
+		border: 1px solid #726F6F;
 		margin: 0;
 		padding: 3px;
 	}
@@ -243,23 +228,20 @@ h2 {
 
 #bottom {
 	background: #FFF none repeat 0 0;
-	border-top: 1px #CCC solid;
-	border-bottom: 1px #CCC solid;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
 	clear: both;
 
 	p {
-		margin-left: 3%;
 		font-size: 12px;
+		margin-left: 3%;
 	}
 }
 
 #footer-area {
 	background-color: #F7F7F7;
-	border-top: 1px #DDADAD solid;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 12px;
+	border-top: 1px solid #DDADAD;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	display: block;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -278,19 +260,18 @@ h2 {
 	width: 31.3%;
 
 	&:hover {
-		background: #E2EEF3 none repeat  0 0
+		background: #E2EEF3;
 	}
 
 	#footer-title h2 {
-	margin-bottom: 0.5em;
-	padding-top: 0.5em;
+		margin-bottom: 0.5em;
+		padding-top: 0.5em;
 	}
 }
 
 .powered-by {
 	color: #555;
 	float: right;
-	font: inherit;
 	font-size: 12px;
 	text-align: right;
 	margin-right: 3%;
@@ -312,34 +293,27 @@ h2 {
 
 .portlet {
 	background-color: #FFF;
-	border: 1px $brcolor solid;
+	border: 1px solid $brcolor;
 	margin-bottom: 10px;
 	padding: 3px;
 	text-align: left;
 }
 
 .portlet-column {
-	border: 0 $brcolor none;
-	font-family: inherit;
-	font-size: 100%;
-	font-style: inherit;
-	font-weight: inherit;
+	border-width: 0;
 	margin: 0;
-	outline-style: none;
 	outline-width: 0;
 	padding: 0;
 	vertical-align: baseline;
-
-	div {
-		overflow-x: hidden;
-		overflow-y: hidden;
-		width: 100%;
-	}
 }
 
 .portlet-content {
-	background-color: #FFF none repeat 0 0 ;
+	background-color: #FFF;
 	border-width: 0;
+
+	.social-profile{
+		background-attachment: scroll;
+	}
 }
 
 #portlet-layout {
@@ -347,29 +321,24 @@ h2 {
 	margin-right: 3%;
 
 	.portlet > h1 {
-	border-bottom: 1px #EEE solid;
-	color: #555;
-	font-size: 14px;
-	font-weight: bold;
-	margin: 0em -0.75em 1em;
-	padding: 0 1em 0.5em;
-	text-transform: uppercase;
+		border-bottom: 1px solid #EEE;
+		color: #555;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0em -0.75em 1em;
+		padding: 0 1em 0.5em;
+		text-transform: uppercase;
 	}
 }
 
 .portlet-title {
-	border-bottom: 1px #EEE solid;
+	border-bottom: 1px solid #EEE;
 	color: #555;
 	font-size: 14px;
 	font-weight: bold;
-	margin: 0 -0.75em 1em;
 	padding: 0 1em 0.5em;
 	text-transform: uppercase;
 }
-
-/* -------- Portlet Max -------- */
-
-/* -------- Custom Classes -------- */
 
 /* -------- AUI -------- */
 
@@ -378,7 +347,7 @@ h2 {
 }
 
 .aui-carousel menu {
-	background: $spcolor none repeat 0 0;
+	background: $spcolor;
 	bottom: 6px;
 	left: 236px;
 	list-style: none;
@@ -402,7 +371,7 @@ h2 {
 	background-color: #FFF;
 	background-image: url(../images/aui/prev.png);
 }
-	   
+
 /* -------- Web Content -------- */
 
 .yui3-dd-drop a {
@@ -423,7 +392,6 @@ h2 {
 
 	.portlet-body .portlet {
 		background-color: $pcolor;
-		border-bottom: 1px #E2E2E2 solid;
 		border-width: 0;
 	}
 
@@ -439,10 +407,8 @@ h2 {
 		width: 240%
 	}
 
-	.portlet-topper {
-		img {
-			visibility: hidden;
-		}
+	.portlet-topper img {
+		visibility: hidden;
 	}
 }
 
@@ -454,43 +420,28 @@ h2 {
 
 	.portlet {
 		background-color: #FFF;
-		border: 1px $brcolor solid;
+		border: 1px solid $brcolor;
 		clear: both;
 		font-size: 12px;
 		margin-bottom: 2em;
-		padding: 1em 1.5em 1.5em;
+		width: 100%;
 	}
 
-	.portlet-content {
+	.portlet-content, .portlet-title {
 		img {
 			visibility: hidden;
 		}
-	}
-
-	.portlet-title img {
-		visibility: hidden;
 	}
 }
 
 /* -------- Extras -------- */
 
-.aui-carousel-item {
-	@include border-radius(5px);
+#header {
+	@include border-top-left-radius(5px);
+	@include border-top-right-radius(5px);
 }
 
-body .portlet-content .social-profile{
-	@include background-attachment;
-}
-
-#column-2 .portlet {
-	@include border-radius(5px);
-}
-
-div section {
-	@include border-radius(5px);
-}
-
-.footer-block {
+div section, .aui-carousel-item, #column-2 .portlet, .footer-block, #wrapper {
 	@include border-radius(5px);
 }
 
@@ -498,16 +449,20 @@ div section {
 	@include box-shadow(none);
 }
 
-.social-profile a {
-	@include transition-property(all);
-	@include transition-duration(.2s);
-	@include transition-timing-function(ease);
-	@include transition-delay(0s);
-}
-.social-profile li a:active {
-	@include box-shadow(0 0 6px #000 inset); 
+.social-profile {
+	a {
+		@include transition-delay(0s);
+		@include transition-duration(.2s);
+		@include transition-property(all);
+		@include transition-timing-function(ease);
+	}
+
+	li a:active {
+		@include box-shadow(0 0 6px #000 inset);
+	}
 }
 
-#wrapper {
-	@include border-radius(5px);
+#bottom {
+	@include border-bottom-left-radius(5px);
+	@include border-bottom-right-radius(5px);
 }
